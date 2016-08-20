@@ -1,3 +1,4 @@
+# -*- utf-8 -*-
 """
 Django settings for Tango_with_django_project project.
 
@@ -14,6 +15,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -51,6 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Tango_with_django_project.urls'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -119,3 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if '__name__' == '__main__':
+    print __file__
+    print os.path.dirname(__file__)
+    print os.path.dirname(os.path.dirname(__file__))
+    print BASE_DIR
